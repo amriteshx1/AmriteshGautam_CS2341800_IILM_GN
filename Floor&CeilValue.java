@@ -1,17 +1,12 @@
 class Main {
-    static void floorAndCeil(int[] arr, int x) {
-        int floor = -1;
-        int ceil = -1;
+    static void floorAndCeil(double x) {
+        int floor = (int) x;
 
-        for (int num : arr) {
-            if (num <= x) {
-                floor = num;
-            }
-
-            if (num >= x) {
-                ceil = num;
-                break;
-            }
+        int ceil;
+        if (x == floor) {
+            ceil = floor;
+        } else {
+            ceil = floor + 1;
         }
 
         System.out.println("Floor: " + floor);
@@ -19,7 +14,6 @@ class Main {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 3, 5, 7, 9, 11};
-        floorAndCeil(arr, 6);
+        floorAndCeil(8.3);
     }
 }
