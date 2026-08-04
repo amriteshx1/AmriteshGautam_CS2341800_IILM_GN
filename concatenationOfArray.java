@@ -11,6 +11,16 @@ class Solution {
             arr[i] = nums[i - n];
         }
 
+        // single loop
+
+        // for(int i = 0; i < 2 * n; i++){
+        //     if(i < n){
+        //          arr[i] = nums[i];
+        //          continue;
+        //     }
+        //     arr[i] = nums[i - n];
+        // }
+
         return arr;
     }
 }
